@@ -1,16 +1,16 @@
 services:
-  app:
-    build: .
-    container_name: nest_app
-    ports:
-      - "3000:3000"
-    depends_on:
-      - db
-    environment:
-      DATABASE_URL: "postgresql://postgres:postgres@db:5432/nestdb"
-    volumes:
-      - .:/app
-      - /app/node_modules
+  # app:
+  #   build: .
+  #   container_name: nest_app
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     DATABASE_URL: "postgresql://postgres:postgres@db:5432/nestdb"
+  #   volumes:
+  #     - .:/app
+  #     - /app/node_modules
 
   db:
     image: postgres:17.4
